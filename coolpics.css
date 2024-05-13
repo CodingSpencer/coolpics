@@ -1,9 +1,12 @@
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 2000px) {
   header {
     background-color: blueviolet;
   }
   header h1 {
     text-align: center;
+  }
+  header .button-container {
+    display: none;
   }
   header ul {
     display: grid;
@@ -36,32 +39,36 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   header {
     background-color: blueviolet;
   }
   header h1 {
     text-align: center;
   }
+  header .button-container {
+    display: flex;
+    justify-content: center;
+  }
   header ul {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 15px;
-    list-style-type: none;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
   }
   header li a {
     color: black;
+    text-align: center;
   }
   main h2 {
     text-align: center;
   }
   main .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
   }
   main figure {
-    padding: 20px;
+    padding: 0px;
   }
   main figure img {
     object-fit: cover;
