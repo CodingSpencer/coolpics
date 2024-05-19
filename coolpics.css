@@ -1,4 +1,25 @@
 @media screen and (max-width: 2000px) {
+  .viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 100px;
+  }
+  .viewer .close-viewer {
+    grid-row: 1;
+    color: white;
+    padding: 25px;
+    justify-self: end;
+  }
+  .viewer img {
+    max-height: 100%;
+    padding: 20px;
+  }
   header {
     background-color: blueviolet;
   }

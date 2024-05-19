@@ -1,30 +1,28 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const hide = document.querySelector("header ul");
+  const menu_opt = document.querySelector("header ul");
   const menu = document.querySelector(".menu");
 
-  //   menu.addEventListener("click", () => {
-  //     if (hide.classList.contains("hide")) {
-  //       hide.classList.replace("hide", "show");
-  //     } else {
-  //       hide.classList.replace("show", "hide");
-  //     }
   menu.addEventListener("click", () => {
-    hide.classList.toggle("hide");
+    menu_opt.classList.toggle("hide");
   });
+
+  function handleResize() {
+    if (window.innerWidth > 1000) {
+      menu_opt.classList.remove("hide");
+    } else {
+      menu_opt.classList.add("hide");
+    }
+  }
+
+  function viewerTemplate(pic, alt) {
+    return `<div class="viewer">
+    <button class="close-viewer">X</button>
+    <img src="${pic}" alt="${alt}" />
+    </div>`;
+  }
+
+  function viewHandler() {}
+
+  handleResize();
+  window.addEventListener("resize", handleResize);
 });
-
-// const menuButton = document.querySelector(".menu");
-// function toggleMenu() {
-//   const menu = document.querySelector(".hide");
-//   menu.classList.toggle("show");
-// }
-
-// menuButton.addEventListener("click", toggleMenu);
-
-// window.addEventListener('resize', () => {
-//     const width = window.innerWidth;
-
-//     if (width < 800) {
-//         document.querySelector
-//     }
-// })
