@@ -6,16 +6,24 @@
     text-align: center;
   }
   header .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  header .hide {
     display: none;
   }
-  header ul {
+
+  header .menu_opt {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
     list-style-type: none;
+    justify-items: center;
   }
   header li a {
     color: black;
+    text-decoration: none;
   }
   main h2 {
     text-align: center;
@@ -24,6 +32,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    justify-items: center;
   }
   main figure {
     padding: 20px;
@@ -31,15 +40,17 @@
   main figure img {
     object-fit: cover;
     max-width: 100%;
+    min-width: 250px;
     width: 250px;
     height: 250px;
+    border: 20px solid tan;
   }
   footer {
     background-color: blueviolet;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
   header {
     background-color: blueviolet;
   }
@@ -50,7 +61,65 @@
     display: flex;
     justify-content: center;
   }
-  header ul {
+
+  header .hide {
+    display: none;
+  }
+
+  header .menu_opt {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    list-style-type: none;
+    justify-items: center;
+  }
+  header li a {
+    color: black;
+  }
+  main h2 {
+    text-align: center;
+  }
+  main .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+  }
+  main figure {
+    padding: 20px;
+  }
+  main figure img {
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 250px;
+    width: 250px;
+    height: 250px;
+    border: 20px solid tan;
+  }
+  footer {
+    background-color: blueviolet;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    background-color: blueviolet;
+    padding: 20px;
+    color: blueviolet;
+    margin-bottom: 20px;
+  }
+  header h1 {
+    text-align: center;
+  }
+  header .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  header .hide {
+    display: none;
+  }
+  header .menu_opt {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
@@ -68,13 +137,16 @@
     justify-items: center;
   }
   main figure {
-    padding: 0px;
+    padding: 10px;
   }
-  main figure img {
+  img {
     object-fit: cover;
     max-width: 100%;
+    min-width: 250px;
     width: 250px;
     height: 250px;
+    display: block;
+    border: 20px solid tan;
   }
   footer {
     background-color: blueviolet;
