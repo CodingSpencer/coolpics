@@ -16,9 +16,10 @@ function handleResize() {
 
 function viewerTemplate(pic, alt) {
   return `<div class="viewer">
+  <div class="viewerContainer">
   <button id="close-viewer">X</button>
   <img src="${pic}" alt="${alt}" />
-  </div>`;
+  </div></div>`;
 }
 
 function viewHandler(event) {
@@ -32,7 +33,7 @@ function viewHandler(event) {
 
   const close = document.getElementById("close-viewer");
   close.addEventListener("click", () => {
-    document.querySelector("viewer").remove();
+    document.querySelector(".viewer").remove();
   });
 }
 
